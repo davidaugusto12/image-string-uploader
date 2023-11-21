@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         mTextViewShowUploads.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implement the show uploads functionality here
+                openImagesActivity();
             }
         });
     }
@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
         mGetContentLauncher.launch(intent);
+
     }
 
     private String getFileExtension(Uri uri) {
@@ -160,5 +161,9 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
         }
+    }
+    private void openImagesActivity(){
+        Intent intent = new Intent(this,ImagesActivity.class);
+        startActivity(intent);
     }
 }
