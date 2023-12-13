@@ -69,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
                     if (result.getResultCode() == RESULT_OK && result.getData() != null) {
-                        // Handle the selected image URI
                         mImageUri = result.getData().getData();
                         mImageView.setImageURI(mImageUri);
                     }
