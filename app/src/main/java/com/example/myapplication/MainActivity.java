@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (mUploadTask != null && mUploadTask.isInProgress()) {
-                    Toast.makeText(MainActivity.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Upload em progresso", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadFile();
                 }
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
                                 }
                             }, 500);
 
-                            Toast.makeText(MainActivity.this, "Upload successful", Toast.LENGTH_LONG).show();
+                            Toast.makeText(MainActivity.this, "Upload feito com sucesso", Toast.LENGTH_LONG).show();
 
                             // Obter a URL de download
                             fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
         } else {
-            Toast.makeText(this, "No file selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Nenhum arquivo selecionado", Toast.LENGTH_SHORT).show();
         }
     }
     private void openImagesActivity(){
