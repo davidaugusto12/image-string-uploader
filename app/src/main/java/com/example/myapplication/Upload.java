@@ -9,7 +9,7 @@ public class Upload {
     private String mKey;
 
     public Upload() {
-        //empty constructor needed
+        //Construtor vazio
     }
 
     public Upload(String name, String imageUrl) {
